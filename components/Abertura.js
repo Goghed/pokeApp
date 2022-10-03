@@ -8,10 +8,11 @@ import {
   StatusBar,
 } from "react-native";
 
+//Criacao e exportacao do componente na mesma linha com a propriedade Navigation
 export default function Abertura({ navigation }) {
-  
+  //Retorna a tela inicial interativa de pokebola
   return (
-    <View style={styles.container} >
+    <View style={styles.container}>
       <StatusBar barStyle={"light-content"} backgroundColor={"#ff043a"} />
       <ImageBackground
         source={require("../assets/background.png")}

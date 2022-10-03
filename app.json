@@ -24,7 +24,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.fatec.eletivaMobile.pokeApp"
     },
     "web": {
       "favicon": "./assets/favicon.png"

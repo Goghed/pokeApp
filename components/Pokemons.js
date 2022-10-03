@@ -10,19 +10,24 @@ import {
 } from "react-native";
 
 const Pokemons = (props) => {
+  //Implementacao do useState para apresentacao dos pokemons
   const [pokemons, setPokemons] = useState([]);
+  //Implementacao do useState para realizar busca dos pokemons
   const [busca, setBusca] = useState("");
 
+  //Execucao do useEffect sempre que o componente for atualizado
   useEffect(() => {
     fetchPokemons();
   }, []);
 
+  //Funcao que busca os 151 pokemons na API
   const fetchPokemons = () => {
     fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
       .then((resposta) => resposta.json())
       .then((pokemons) => setPokemons(pokemons.results));
   };
 
+  //Renderizando e formatando o retorno das informacao obtidas
   return (
     <View>
       <View style={styles.containerBusca}>
@@ -67,6 +72,7 @@ const Pokemons = (props) => {
   );
 };
 
+//Exportando componente como padrao
 export default Pokemons;
 
 const styles = StyleSheet.create({
